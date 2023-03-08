@@ -4,7 +4,7 @@ import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-screen min-h-screen overflow-y-auto">
+    <div className="w-full min-h-screen">
       <Header />
       {children}
       <Footer />

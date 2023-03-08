@@ -10,11 +10,19 @@ const Footer = () => {
   return (
     <>
       <div className="bg-[#797979] w-full grid grid-cols-3 text-white text-xl px-20">
-        {footerData.map((item) => (
-          <div className="p-10 flex flex-col gap-1">
+        {footerData.map((item, index) => (
+          <div
+            className="p-10 flex flex-col gap-1"
+            key={index}
+          >
             <div>{item.title}</div>
-            {item.content.map((contentItem) => (
-              <div className="text-base">{contentItem}</div>
+            {item.content.map((contentItem, contentIndex) => (
+              <div
+                className="text-base"
+                key={contentIndex}
+              >
+                {contentItem}
+              </div>
             ))}
           </div>
         ))}

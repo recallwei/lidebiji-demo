@@ -14,9 +14,9 @@ const TempIcon = () => (
       <g
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
         <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
@@ -75,11 +75,14 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-screen px-48 py-10 bg-gray-100">
+      <section className="w-full px-48 py-10 bg-gray-100">
         <div className="text-xl flex items-center justify-center mb-8">平台服务</div>
         <div className="grid grid-cols-3 gap-32">
-          {serviceData.map((item) => (
-            <div className="rounded-sm flex flex-col gap-4 shadow-xl p-10">
+          {serviceData.map((item, index) => (
+            <div
+              className="rounded-sm flex flex-col gap-4 shadow-xl p-10"
+              key={index}
+            >
               <div className="bg-red-500 rounded-full w-20 h-20 m-auto flex items-center justify-center">
                 <TempIcon />
               </div>
@@ -93,8 +96,9 @@ const HomePage = () => {
       <section className="w-full px-48 py-10">
         <div className="text-xl flex items-center justify-center mb-8">合作伙伴</div>
         <div className="grid grid-cols-5 gap-32 py-8">
-          {sponsorData.map((item) => (
+          {sponsorData.map((_, index) => (
             <StaticImage
+              key={index}
               src={"../images/microsoft.png"}
               alt="microsoft"
               width={280}
