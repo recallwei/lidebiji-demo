@@ -3,10 +3,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby + Vercel`,
-    siteUrl: `https://gatsby-template.vercel.app/`,
+    title: "Gatsby Demo",
+    siteUrl: "https://gatsby-template.vercel.app/"
   },
   plugins: [
-    'gatsby-plugin-postcss',
-  ],
-};
+    "gatsby-plugin-postcss",
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp'
+  ]
+}
