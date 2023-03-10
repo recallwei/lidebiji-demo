@@ -16,7 +16,6 @@ const Brand = () => (
 )
 
 const NavList = ({ location }) => {
-  console.log(location)
   return (
     <div className="flex gap-10 items-center grow">
       {menuList.map((item, index) => (
