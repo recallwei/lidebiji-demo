@@ -1,105 +1,91 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { Layout } from "../components"
+import { Layout, Banner, ServiceCard } from "components"
+import background from "images/pages/index/background.png"
+import bannerPic from "images/pages/index/bannerPic.png"
+import microsoft from "images/microsoft.png"
+import projectImg from "images/pages/index/service/project.png"
+import taskImg from "images/pages/index/service/task.png"
+import mediaImg from "images/pages/index/service/media.png"
+import chatImg from "images/pages/index/service/chat.png"
+import materialImg from "images/pages/index/service/material.png"
+import resultImg from "images/pages/index/service/result.png"
 
-const TempIcon = () => (
-  <>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      height={48}
-      width={48}
-      color="white"
-    >
-      <g
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-        <path d="M3 6v13"></path>
-        <path d="M12 6v13"></path>
-        <path d="M21 6v13"></path>
-      </g>
-    </svg>
-  </>
-)
-
-const HomePage = () => {
+const HomePage = ({ location }) => {
+  const bannerData = {
+    title: "自主运营",
+    description:
+      "针对品牌内容运营需求，提供团队分工、创作者对接、内容审核、数据统计等流程化解决方案，助力企业沉淀内容、轻松运营"
+  }
   const serviceData = [
     {
       title: "项目管理",
       content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "通过项目打造标准化工作流，明晰成员协作职责，可配置预算保证项目正常运转，可视化数据轻松分析效果",
+      path: projectImg
     },
     {
-      title: "项目管理",
-      content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      title: "任务管理",
+      content: "将复杂工作拆分为细分任务，便于创作者快速理解、快速启动，便捷高效的进行任务管理",
+      path: taskImg
     },
     {
-      title: "项目管理",
-      content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      title: "媒体资源",
+      content: "平台拥有大量媒体/自媒体资源，根据品牌需求可导流至项目",
+      path: mediaImg
     },
     {
-      title: "项目管理",
+      title: "在线沟通",
       content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "平台支持一键直联创作者，在线与创作者沟通原创需求、投放排期、呈现方式等细节，投放需求直接跟创作者谈",
+      path: chatImg
     },
     {
-      title: "项目管理",
-      content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      title: "素材管理",
+      content: "平台提供素材存储管理功能，有效解决素材乱存、乱用、乱放等问题，帮助企业构建内容池",
+      path: materialImg
     },
     {
-      title: "项目管理",
-      content:
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      title: "效果分析",
+      content: "不同维度、多种视图数据统计，项目效果一目了然，驱动企业持续优化",
+      path: resultImg
     }
   ]
-
   const sponsorData = new Array(12).fill(undefined)
 
   return (
-    <Layout>
-      <section className="relative w-full h-96 bg-slate-400 text-white bg-gradient-to-r from-cyan-500 to-blue-500">
-        <div className="absolute left-56 top-0 bottom-0 m-auto flex flex-col gap-2 justify-center">
-          <span className="text-2xl">媒体投放</span>
-          <span className="w-[200px] whitespace-normal break-words">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-          </span>
-        </div>
-      </section>
+    <Layout location={location}>
+      <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        image={bannerPic}
+        background={background}
+      />
 
-      <section className="w-full px-48 py-10 bg-gray-100">
-        <div className="text-xl flex items-center justify-center mb-8">平台服务</div>
-        <div className="grid grid-cols-3 gap-32">
+      <section className="w-full px-64 py-16 bg-gray-100">
+        <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
+          平台服务
+        </div>
+        <div className="grid grid-cols-3 gap-10">
           {serviceData.map((item, index) => (
-            <div
-              className="rounded-sm flex flex-col gap-4 shadow-xl p-10"
+            <ServiceCard
               key={index}
-            >
-              <div className="bg-red-500 rounded-full w-20 h-20 m-auto flex items-center justify-center">
-                <TempIcon />
-              </div>
-              <div className="text-lg text-center font-semibold">{item.title}</div>
-              <div className="text-sm max-w-full whitespace-normal break-words">{item.content}</div>
-            </div>
+              title={item.title}
+              content={item.content}
+              path={item.path}
+            />
           ))}
         </div>
       </section>
 
-      <section className="w-full px-48 py-10">
-        <div className="text-xl flex items-center justify-center mb-8">合作伙伴</div>
+      <section className="w-full px-64 py-16">
+        <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
+          合作伙伴
+        </div>
         <div className="grid grid-cols-5 gap-32 py-8">
           {sponsorData.map((_, index) => (
-            <StaticImage
+            <img
               key={index}
-              src={"../images/microsoft.png"}
+              src={microsoft}
               alt="microsoft"
               width={280}
               height={60}
@@ -113,4 +99,4 @@ const HomePage = () => {
 
 export default HomePage
 
-export const Head = () => <title>Gatsby Demo</title>
+export const Head = () => <title>自主运营 - 里德笔记</title>
