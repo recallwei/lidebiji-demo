@@ -54,4 +54,16 @@ const sponsorData = [
   "天梭"
 ].map((item) => getPath(item))
 
-export const homePageData = { bannerData, serviceData, sponsorData }
+const targetData = [
+  {
+    title: "OIU",
+    tags: ["婴童家居", "品质育儿", "国货品牌"],
+    description:
+      "基于高线城市用户洞察，强调功能和专业背书成为qborn构建多元内容矩阵的破局点。借助高互动的优质内容，有效撬动品牌自然流量的飙升。",
+    totalNum: "803w+",
+    searchNum: "212%",
+    path: "/pages/index/target/oiu.png"
+  }
+]
+
+export const homePageData = { bannerData, serviceData, sponsorData, targetData }

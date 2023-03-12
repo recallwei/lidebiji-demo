@@ -3,15 +3,15 @@ import React from "react"
 const Banner = ({ title, description, image, background }) => {
   return (
     <div
-      className="relative w-full h-96 text-white bg-cover bg-center"
+      className="w-full max-sm:px-4 sm:px-4 xl:px-64 h-96 text-white bg-cover bg-center flex justify-between"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="absolute left-56 top-0 bottom-0 m-auto flex flex-col gap-6 justify-center">
-        <span className="text-3xl">{title}</span>
-        <span className="w-[350px] whitespace-normal break-words text-sm">{description}</span>
+      <div className="flex flex-col justify-center mr-4">
+        <span className="text-3xl mb-6">{title}</span>
+        <span className="max-w-[320px] whitespace-normal break-words text-sm">{description}</span>
       </div>
 
-      <div className="absolute right-56 top-0 bottom-0 m-auto flex items-center">
+      <div className="flex items-center">
         <img
           src={image}
           width="480"
