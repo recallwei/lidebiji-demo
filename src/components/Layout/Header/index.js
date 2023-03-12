@@ -2,12 +2,11 @@ import React from "react"
 import { navigate } from "gatsby"
 import clsx from "clsx"
 import { menuList } from "models"
-import logo from "images/logo.png"
 
 const Brand = () => (
   <div className="flex items-center gap-2">
     <img
-      src={logo}
+      src="/logo.png"
       alt="里德笔记"
       width={128}
       height={30}

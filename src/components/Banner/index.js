@@ -3,7 +3,7 @@ import React from "react"
 const Banner = ({ title, description, image, background }) => {
   return (
     <div
-      className="relative w-full h-96 bg-slate-400 text-white bg-cover bg-center"
+      className="relative w-full h-96 text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="absolute left-56 top-0 bottom-0 m-auto flex flex-col gap-6 justify-center">

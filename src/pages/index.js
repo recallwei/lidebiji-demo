@@ -1,7 +1,5 @@
 import React from "react"
 import { Layout, Banner, ServiceCard, ImageLoop } from "components"
-import background from "images/pages/index/background.png"
-import bannerPic from "images/pages/index/bannerPic.png"
 import { homePageData } from "models"
 
 const HomePage = ({ location }) => {
@@ -12,8 +10,8 @@ const HomePage = ({ location }) => {
       <Banner
         title={bannerData.title}
         description={bannerData.description}
-        image={bannerPic}
-        background={background}
+        image="/pages/index/bannerPic.png"
+        background="/pages/index/background.png"
       />
 
       <section className="w-full px-64 py-16 bg-gray-100">

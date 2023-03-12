@@ -1,7 +1,5 @@
 import React from "react"
 import { Layout, Banner, ServiceCard } from "components"
-import background from "images/pages/media/background.png"
-import bannerPic from "images/pages/media/bannerPic.png"
 import { mediaPageData } from "models"
 
 const MediaPage = ({ location }) => {
@@ -12,8 +10,8 @@ const MediaPage = ({ location }) => {
       <Banner
         title={bannerData.title}
         description={bannerData.description}
-        image={bannerPic}
-        background={background}
+        image="/pages/media/bannerPic.png"
+        background="/pages/media/background.png"
       />
 
       <section className="w-full px-64 py-16 bg-gray-100">

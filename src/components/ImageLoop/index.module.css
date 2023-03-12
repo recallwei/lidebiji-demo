@@ -1,13 +1,13 @@
 .list {
   animation: loop 10s linear infinite normal;
-  --offsetWidth: 800;
 }
 
 @keyframes loop {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
-    transform: translate3d(var(--offsetWidth)px, 0, 0);
+    transform: translate3d(calc(-1 * (100vw - 128px)), 0, 0);
   }
 }
