@@ -2,6 +2,10 @@
   animation: loop 10s linear infinite normal;
 }
 
+.listReverse {
+  animation: loop-reverse 10s linear infinite normal;
+}
+
 @keyframes loop {
   0% {
     transform: translate3d(0, 0, 0);
@@ -9,5 +13,15 @@
 
   100% {
     transform: translate3d(calc(-1 * (100vw - 128px)), 0, 0);
+  }
+}
+
+@keyframes loop-reverse {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc((100vw - 128px)), 0, 0);
   }
 }

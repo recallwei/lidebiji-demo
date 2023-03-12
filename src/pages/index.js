@@ -14,7 +14,7 @@ const HomePage = ({ location }) => {
         background="/pages/index/background.png"
       />
 
-      <section className="w-full px-64 py-16 bg-gray-100">
+      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16 bg-gray-100">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
@@ -30,11 +30,16 @@ const HomePage = ({ location }) => {
         </div>
       </section>
 
-      <section className="w-full px-64 py-16">
+      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           合作伙伴
         </div>
         <div className="relative py-8 overflow-hidden w-full">
+          <ImageLoop list={sponsorData} />
+          <ImageLoop
+            list={sponsorData}
+            reverse
+          />
           <ImageLoop list={sponsorData} />
         </div>
       </section>

@@ -1,24 +1,19 @@
 import React from "react"
+import { footerData, COPY_RIGHT } from "models"
 
 const Footer = () => {
-  const footerData = [
-    { title: "合作", content: ["xxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxxxxx"] },
-    { title: "服务", content: ["xxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxxxxx"] },
-    { title: "职业生涯", content: ["xxxxxxxxxxxxxxxxx", "xxxxxxxxxxxxxxxxx"] }
-  ]
-
   return (
     <>
-      <div className="bg-[#797979] w-full grid grid-cols-3 text-white text-xl px-20">
+      <div className="bg-[#797979] w-full grid grid-cols-3 text-white max-sm:px-4 sm:px-4 xl:px-64">
         {footerData.map((item, index) => (
           <div
-            className="p-10 flex flex-col gap-1"
+            className="p-12 flex flex-col"
             key={index}
           >
-            <div>{item.title}</div>
+            <div className="text-lg mb-5">{item.title}</div>
             {item.content.map((contentItem, contentIndex) => (
               <div
-                className="text-base"
+                className="text-sm mb-2"
                 key={contentIndex}
               >
                 {contentItem}
@@ -27,8 +22,8 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="h-10 bg-[#424242] w-full flex items-center justify-center text-white">
-        2022 xxx.com
+      <div className="h-10 bg-[#424242] w-full flex items-center justify-center text-white text-xs">
+        {COPY_RIGHT}
       </div>
     </>
   )
