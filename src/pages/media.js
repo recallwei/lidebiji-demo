@@ -43,9 +43,9 @@ const MediaPage = ({ location }) => {
         </div>
       </section>
 
-      <section className="relative w-full max-sm:px-4 sm:px-4 xl:px-64 pt-16 pb-60 bg-[#333333] text-white">
+      <section className="relative w-full max-sm:px-4 sm:px-4 xl:px-64 pt-16 max-sm:pb-80 sm:pb-60 xl:pb-60 bg-[#333333] text-white">
         <div className="text-2xl flex items-center justify-center mb-8 ">投放流程</div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-11 gap-4">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-11">
           {processData.map((item, index) => (
             <div key={index}>
               {item.arrow ? (
@@ -73,11 +73,11 @@ const MediaPage = ({ location }) => {
           ))}
         </div>
         <div
-          className="absolute mx-64 py-14 px-36 rounded-xl z-10 -bottom-[150px] right-0 left-0 m-auto shadow-2xl bg-center bg-cover text-[#3A3A3A]"
+          className="absolute max-sm:mx-4 sm:mx-24 xl:mx-64 max-sm:py-4 sm:py-14 max-sm:px-2 sm:px-4 xl:px-36 rounded-xl z-10 max-sm:-bottom-[200px] sm:-bottom-[180px] xl:-bottom-[150px] right-0 left-0 m-auto shadow-2xl bg-center bg-cover text-[#3A3A3A]"
           style={{ backgroundImage: `url(/pages/media/process/background.png)` }}
         >
           <div className="text-2xl flex items-center justify-center mb-8">品牌客户</div>
-          <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
+          <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 max-sm:gap-8 sm:gap-16 xl:gap-16">
             {brandCustomerData.map((item, index) => (
               <div
                 key={index}
