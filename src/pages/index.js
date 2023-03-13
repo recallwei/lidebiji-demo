@@ -75,4 +75,4 @@ const HomePage = ({ location }) => {
 
 export default HomePage
 
-export const Head = () => <title>自主运营 - 里德笔记</title>
+export const Head = () => <title>自主运营 | 里德笔记</title>

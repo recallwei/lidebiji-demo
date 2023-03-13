@@ -35,4 +35,4 @@ const MediaPage = ({ location }) => {
 
 export default MediaPage
 
-export const Head = () => <title>媒体投放 - 里德笔记</title>
+export const Head = () => <title>媒体投放 | 里德笔记</title>
