@@ -46,7 +46,7 @@ const sponsorData = [
   "凤凰网",
   "网易新闻",
   "知乎",
-  "搜狐",
+  "搜狐网",
   "今日头条",
   "百家号",
   "一点资讯",
@@ -66,22 +66,27 @@ const processData = [
     title: "01.注册登录",
     iconPath: "/pages/media/process/注册登录.png"
   },
+  { arrow: true },
   {
     title: "02.充值费用",
     iconPath: "/pages/media/process/充值费用.png"
   },
+  { arrow: true },
   {
     title: "03.编辑稿件",
     iconPath: "/pages/media/process/编辑稿件.png"
   },
+  { arrow: true },
   {
     title: "04.选择媒体",
     iconPath: "/pages/media/process/选择媒体.png"
   },
+  { arrow: true },
   {
     title: "05.确认下单",
     iconPath: "/pages/media/process/确认下单.png"
   },
+  { arrow: true },
   {
     title: "06.等待发布回链",
     iconPath: "/pages/media/process/等待发布回链.png"
