@@ -18,7 +18,7 @@ const HomePage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
               key={index}
@@ -48,7 +48,7 @@ const HomePage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           部分案例
         </div>
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
           {targetData.map((item, index) => (
             <TargetCard
               key={index}

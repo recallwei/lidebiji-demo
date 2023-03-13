@@ -9,17 +9,19 @@ const TargetCard = ({ data, path }) => {
         alt=""
       />
 
-      <div className="text-sm max-w-full whitespace-normal break-words text-[#999999] p-4">
-        <div className="flex items-center mb-2">
-          <div className="text-[#333333] text-xl">{data.title}</div>
-          {data.tags.map((tag, index) => (
-            <div
-              key={index}
-              className="text-[6px] ml-2"
-            >
-              {tag}
-            </div>
-          ))}
+      <div className="text-sm max-w-full whitespace-normal break-words text-[#999999] p-4 grow">
+        <div className="flex justify-center mb-2 whitespace-nowrap flex-col">
+          <div className="text-[#333333] text-xl mr-2 mb-1">{data.title}</div>
+          <div className="flex">
+            {data.tags.map((tag, index) => (
+              <div
+                key={index}
+                className="text-[6px] mr-2"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col text-[8px]">
