@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, Banner, ServiceCard } from "components"
+import { Layout, Banner, ServiceCard, ImageLoop } from "components"
 import { mediaPageData } from "models"
 
 const MediaPage = ({ location }) => {
