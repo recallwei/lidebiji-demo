@@ -71,7 +71,7 @@ const MediaPage = ({ location }) => {
                 </div>
               ) : (
                 <div className="flex flex-col items-center">
-                  <div className="w-24 h-24 rounded-full outline-white outline outline-[1.2px] flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full border-white border-[1.5px] flex items-center justify-center">
                     <img
                       width={40}
                       src={item.iconPath}
