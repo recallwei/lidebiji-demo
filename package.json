@@ -26,7 +26,6 @@
     "eslint-plugin-react": "^7.32.2",
     "gatsby-plugin-manifest": "^5.7.0",
     "gatsby-plugin-postcss": "^6.7.0",
-    "gatsby-plugin-prettier-eslint": "^1.0.6",
     "gatsby-plugin-root-import": "^2.0.9",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
