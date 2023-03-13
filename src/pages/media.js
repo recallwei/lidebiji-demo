@@ -3,8 +3,16 @@ import { Layout, Banner, ServiceCard, ImageLoop, SalesCard } from "components"
 import { mediaPageData } from "models"
 
 const MediaPage = ({ location }) => {
-  const { bannerData, serviceData, sponsorData, processData, brandCustomerData, salesData } =
-    mediaPageData
+  const {
+    bannerData,
+    serviceData,
+    sponsorDataFirstLine,
+    sponsorDataSecondLine,
+    sponsorDataThirdLine,
+    processData,
+    brandCustomerData,
+    salesData
+  } = mediaPageData
 
   return (
     <Layout location={location}>
@@ -33,13 +41,17 @@ const MediaPage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           媒体资源
         </div>
-        <div className="relative py-8 overflow-hidden w-full">
-          <ImageLoop list={sponsorData} />
+        <div className="py-8 overflow-hidden w-full">
           <ImageLoop
-            list={sponsorData}
-            reverse
+            list={sponsorDataFirstLine}
+            className="mb-4"
           />
-          <ImageLoop list={sponsorData} />
+          <ImageLoop
+            list={sponsorDataSecondLine}
+            reverse
+            className="mb-4"
+          />
+          <ImageLoop list={sponsorDataThirdLine} />
         </div>
       </section>
 

@@ -33,7 +33,7 @@ const serviceData = [
 
 const getPath = (name) => `/pages/media/sponsor/${name}.png`
 
-const sponsorData = [
+const sponsorDataFirstLine = [
   "央视网",
   "人民网",
   "中华网",
@@ -42,8 +42,10 @@ const sponsorData = [
   "腾讯网",
   "光明网",
   "36kr",
-  "慧聪网",
-  "凤凰网",
+  "凤凰网"
+].map((item) => getPath(item))
+
+const sponsorDataSecondLine = [
   "网易新闻",
   "知乎",
   "搜狐网",
@@ -51,7 +53,11 @@ const sponsorData = [
   "百家号",
   "一点资讯",
   "新浪网",
-  "汽车之家",
+  "汽车之家"
+].map((item) => getPath(item))
+
+const sponsorDataThirdLine = [
+  "慧聪网",
   "中金在线",
   "雪球",
   "蓝鲸教育",
@@ -153,7 +159,9 @@ const salesData = [
 export const mediaPageData = {
   bannerData,
   serviceData,
-  sponsorData,
+  sponsorDataFirstLine,
+  sponsorDataSecondLine,
+  sponsorDataThirdLine,
   processData,
   brandCustomerData,
   salesData

@@ -3,7 +3,14 @@ import { Layout, Banner, ServiceCard, ImageLoop, TargetCard } from "components"
 import { homePageData } from "models"
 
 const HomePage = ({ location }) => {
-  const { bannerData, serviceData, sponsorData, targetData } = homePageData
+  const {
+    bannerData,
+    serviceData,
+    sponsorDataFirstLine,
+    sponsorDataSecondLine,
+    sponsorDataThirdLine,
+    targetData
+  } = homePageData
 
   return (
     <Layout location={location}>
@@ -32,13 +39,17 @@ const HomePage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           合作伙伴
         </div>
-        <div className="relative py-8 overflow-hidden w-full">
-          <ImageLoop list={sponsorData} />
+        <div className="py-8 overflow-hidden w-full">
           <ImageLoop
-            list={sponsorData}
-            reverse
+            list={sponsorDataFirstLine}
+            className="mb-4"
           />
-          <ImageLoop list={sponsorData} />
+          <ImageLoop
+            list={sponsorDataSecondLine}
+            reverse
+            className="mb-4"
+          />
+          <ImageLoop list={sponsorDataThirdLine} />
         </div>
       </section>
 

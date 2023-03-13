@@ -41,7 +41,7 @@ const serviceData = [
 
 const getPath = (name) => `/pages/index/sponsor/${name}.png`
 
-const sponsorData = [
+const sponsorDataFirstLine = [
   "联想",
   "宝洁",
   "雀巢",
@@ -53,7 +53,10 @@ const sponsorData = [
   "佳能",
   "天梭",
   "微软",
-  "qborn",
+  "qborn"
+].map((item) => getPath(item))
+
+const sponsorDataSecondLine = [
   "华为",
   "oiu",
   "pop-mart",
@@ -65,7 +68,10 @@ const sponsorData = [
   "贝氪",
   "东阿阿胶",
   "韦博国际英语",
-  "洪恩教育",
+  "洪恩教育"
+].map((item) => getPath(item))
+
+const sponsorDataThirdLine = [
   "five-doctors",
   "蜜丝婷",
   "植物医生",
@@ -163,4 +169,11 @@ const targetData = [
   }
 ]
 
-export const homePageData = { bannerData, serviceData, sponsorData, targetData }
+export const homePageData = {
+  bannerData,
+  serviceData,
+  sponsorDataFirstLine,
+  sponsorDataSecondLine,
+  sponsorDataThirdLine,
+  targetData
+}
