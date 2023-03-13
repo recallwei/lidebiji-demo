@@ -32,9 +32,11 @@ const Header = ({ location }) => {
         </div>
 
         {/* 操作区域 */}
-        <div className="flex items-center max-sm:hidden">
-          <div className="mr-8">登录</div>
-          <button className="bg-blue-400 px-4 py-2 rounded-md">免费试用</button>
+        <div className="flex items-center max-sm:hidden select-none">
+          <div className="mr-8 cursor-pointer active:opacity-70 transition-all">登录</div>
+          <button className="bg-blue-400 px-4 py-2 rounded-md cursor-pointer active:opacity-70 transition-all">
+            免费试用
+          </button>
         </div>
 
         {/* 手机端菜单 */}
@@ -67,8 +69,10 @@ const Header = ({ location }) => {
           </div>
         ))}
         <div className="border-t-[0.5px] border-white w-full h-1 mt-0.5" />
-        <div className="mt-2">登录</div>
-        <button className="bg-blue-400 px-4 py-2 rounded-md mt-2 w-28">免费试用</button>
+        <div className="mt-2 cursor-pointer active:opacity-70 transition-all">登录</div>
+        <button className="bg-blue-400 px-4 py-2 rounded-md mt-2 w-28 cursor-pointer active:opacity-70 transition-all">
+          免费试用
+        </button>
       </div>
     </>
   )

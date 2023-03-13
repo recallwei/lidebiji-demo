@@ -65,7 +65,7 @@ const HomePage = ({ location }) => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center mt-12">
+        <div className="flex items-center justify-center mt-12 cursor-pointer active:opacity-70">
           <div className="text-[#2878FC] text-center mr-2">查看更多</div>
           <img
             width="14"
@@ -82,7 +82,7 @@ const HomePage = ({ location }) => {
       >
         <div className="text-2xl mb-4">预约咨询</div>
         <div className="text-lg mb-4">想要获得专属演示，请与我们取得联系。</div>
-        <button className="text-sm bg-white text-[#2878FC] rounded-3xl font-semibold py-2 px-8">
+        <button className="text-sm bg-white text-[#2878FC] rounded-3xl font-semibold py-2 px-8 cursor-pointer active:opacity-70">
           联系我们
         </button>
       </section>
