@@ -22,9 +22,7 @@ const HomePage = ({ location }) => {
           {serviceData.map((item, index) => (
             <ServiceCard
               key={index}
-              title={item.title}
-              content={item.content}
-              path={item.path}
+              data={item}
             />
           ))}
         </div>
@@ -48,14 +46,22 @@ const HomePage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           部分案例
         </div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 justify-items-center gap-16">
           {targetData.map((item, index) => (
             <TargetCard
               key={index}
-              path={item.path}
               data={item}
             />
           ))}
+        </div>
+        <div className="flex items-center justify-center mt-12">
+          <div className="text-[#2878FC] text-center mr-2">查看更多</div>
+          <img
+            width="14"
+            height="14"
+            src="/icons/arrow-down.png"
+            alt=""
+          />
         </div>
       </section>
 

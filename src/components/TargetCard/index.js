@@ -1,11 +1,11 @@
 import React from "react"
 
-const TargetCard = ({ data, path }) => {
+const TargetCard = ({ data }) => {
   return (
     <div className="rounded-sm flex flex-col shadow-xl hover:shadow-2xl cursor-pointer">
       <img
         className="w-full"
-        src={path}
+        src={data.path}
         alt=""
       />
 
