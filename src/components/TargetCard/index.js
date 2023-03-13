@@ -4,19 +4,19 @@ const TargetCard = ({ data, path }) => {
   return (
     <div className="rounded-sm flex flex-col shadow-xl hover:shadow-2xl cursor-pointer">
       <img
-        className="h-40 w-full"
+        className="w-full"
         src={path}
         alt=""
       />
 
       <div className="text-sm max-w-full whitespace-normal break-words text-[#999999] p-4 grow">
         <div className="flex justify-center mb-2 whitespace-nowrap flex-col">
-          <div className="text-[#333333] text-xl mr-2 mb-1">{data.title}</div>
+          <div className="text-[#333333] text-2xl mr-2 mb-1">{data.title}</div>
           <div className="flex">
             {data.tags.map((tag, index) => (
               <div
                 key={index}
-                className="text-[6px] mr-2"
+                className="text-xs mr-2"
               >
                 {tag}
               </div>
@@ -24,7 +24,7 @@ const TargetCard = ({ data, path }) => {
           </div>
         </div>
 
-        <div className="flex flex-col text-[8px]">
+        <div className="flex flex-col">
           <div className="text-[#333333] mb-1">项目介绍</div>
           <div className="text-[#999999]">{data.description}</div>
         </div>

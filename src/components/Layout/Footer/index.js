@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="bg-[#797979] w-full grid max-sm:grid-cols-1 sm:grid-cols-3 text-white max-sm:px-4 sm:px-4 xl:px-64">
         {footerData.map((item, index) => (
           <div
-            className="p-12 flex flex-col"
+            className="max-sm:p-4 sm:p-12 flex flex-col"
             key={index}
           >
             <div className="text-lg mb-5">{item.title}</div>
