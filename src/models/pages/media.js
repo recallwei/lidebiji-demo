@@ -31,6 +31,34 @@ const serviceData = [
   }
 ]
 
-const sponsorData = new Array(12).fill(undefined)
+const getPath = (name) => `/pages/media/sponsor/${name}.png`
+
+const sponsorData = [
+  "央视网",
+  "人民网",
+  "中华网",
+  "黑马网",
+  "环球网",
+  "腾讯网",
+  "光明网",
+  "36kr",
+  "慧聪网",
+  "凤凰网",
+  "网易新闻",
+  "知乎",
+  "搜狐",
+  "今日头条",
+  "百家号",
+  "一点资讯",
+  "新浪网",
+  "汽车之家",
+  "中金在线",
+  "雪球",
+  "蓝鲸教育",
+  "易车",
+  "zaker",
+  "虎嗅",
+  "钛媒体"
+].map((item) => getPath(item))
 
 export const mediaPageData = { bannerData, serviceData, sponsorData }

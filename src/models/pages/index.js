@@ -42,16 +42,41 @@ const serviceData = [
 const getPath = (name) => `/pages/index/sponsor/${name}.png`
 
 const sponsorData = [
-  "宝洁",
-  "飞利浦",
-  "佳能",
-  "康恩贝",
   "联想",
-  "美的",
+  "宝洁",
   "雀巢",
+  "康恩贝",
+  "美的",
   "松下",
   "台铃",
-  "天梭"
+  "飞利浦",
+  "佳能",
+  "天梭",
+  "微软",
+  "qborn",
+  "华为",
+  "oiu",
+  "pop-mart",
+  "my-first-book",
+  "chictoo",
+  "澳佳宝",
+  "维达",
+  "乐蜗家纺",
+  "贝氪",
+  "东阿阿胶",
+  "韦博国际英语",
+  "洪恩教育",
+  "five-doctors",
+  "蜜丝婷",
+  "植物医生",
+  "比亚迪",
+  "顺造",
+  "中国平安",
+  "天鹅到家",
+  "樊登读书",
+  "小仙炖",
+  "小罐茶",
+  "方太"
 ].map((item) => getPath(item))
 
 const targetData = [

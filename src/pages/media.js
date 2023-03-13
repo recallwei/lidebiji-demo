@@ -18,7 +18,7 @@ const MediaPage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
               key={index}
@@ -27,6 +27,20 @@ const MediaPage = ({ location }) => {
               path={item.path}
             />
           ))}
+        </div>
+      </section>
+
+      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16">
+        <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
+          媒体资源
+        </div>
+        <div className="relative py-8 overflow-hidden w-full">
+          <ImageLoop list={sponsorData} />
+          <ImageLoop
+            list={sponsorData}
+            reverse
+          />
+          <ImageLoop list={sponsorData} />
         </div>
       </section>
     </Layout>

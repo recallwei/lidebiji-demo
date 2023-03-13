@@ -1,4 +1,4 @@
 export * from "./menu"
 export * from "./footer"
-export * from "./homePage"
-export * from "./mediaPage"
+export * from "./pages/index"
+export * from "./pages/media"

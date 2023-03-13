@@ -1,3 +1,6 @@
 lidebiji
 tailwindcss
 nprogress
+zaker
+qborn
+chictoo
