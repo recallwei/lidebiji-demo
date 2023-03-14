@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { navigate } from "gatsby"
 import * as styles from "./index.module.css"
 
-const Dropdown = ({ data, className }) => {
+const Dropdown = ({ data, className, location }) => {
   return (
     <div className={clsx("relative", styles.dropdown, className)}>
       <div className="sm:flex items-center justify-center hover:opacity-70 active:opacity-60 transition-all select-none cursor-pointer hidden">

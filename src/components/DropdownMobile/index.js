@@ -4,7 +4,7 @@ import { navigate } from "gatsby"
 import { useToggle } from "hooks"
 //import * as styles from "./index.module.css"
 
-const DropdownMobile = ({ data, className }) => {
+const DropdownMobile = ({ data, className, location }) => {
   const [isShowMenu, toggleShowMenu] = useToggle(false)
   return (
     <>
@@ -21,12 +21,17 @@ const DropdownMobile = ({ data, className }) => {
           {data.title}
         </div>
         <img
-          className={clsx("w-6 -m-1",isShowMenu && "rotate-180")}
+          className={clsx("w-6 -m-1", isShowMenu && "rotate-180")}
           src="/icons/arrow-down.svg"
           alt=""
         />
       </div>
-      <div className={clsx(isShowMenu ? "max-h-[1000px]" : "max-h-0", "transition-all overflow-hidden")}>
+      <div
+        className={clsx(
+          isShowMenu ? "max-h-[1000px]" : "max-h-0",
+          "transition-all overflow-hidden"
+        )}
+      >
         {data.children.map((item, index) => (
           <div
             key={index}

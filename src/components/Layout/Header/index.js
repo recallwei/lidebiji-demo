@@ -28,6 +28,7 @@ const Header = ({ location }) => {
                 <Dropdown
                   data={item}
                   className="h-full w-24 flex items-center justify-center"
+                  location={location}
                 />
               )}
               {item.type === "link" && (
@@ -76,6 +77,7 @@ const Header = ({ location }) => {
               <DropdownMobile
                 data={item}
                 className="mb-2"
+                location={location}
               />
             )}
             {item.type === "link" && (
