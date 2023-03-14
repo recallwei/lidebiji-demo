@@ -27,9 +27,10 @@ const MediaPage = ({ location }) => {
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
+        <div className="flex flex-wrap justify-center gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
+              className="flex-[0_0_28%]"
               key={index}
               data={item}
             />
