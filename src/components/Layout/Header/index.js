@@ -1,16 +1,16 @@
 import React from "react"
 import { navigate } from "gatsby"
 import clsx from "clsx"
-import { menuList } from "models"
+import { Dropdown } from "components"
 import { useToggle } from "hooks"
-import{ Dropdown} from "components"
+import { menuList } from "models"
 
 const Header = () => {
   const [isShowMenu, toggleShowMenu] = useToggle(false)
   return (
     <>
       <div className="bg-[#424242] w-full h-16 px-4 xl:px-64  flex items-center justify-between text-white whitespace-nowrap">
-        <div className="flex items-center">
+        <div className="flex items-center h-16">
           <img
             className="mr-10"
             src="/logo.png"
@@ -19,20 +19,28 @@ const Header = () => {
             height="30"
           />
           {menuList.map((item, index) => (
-            <>
+            <div
+              key={index}
+              className="h-full"
+            >
               {item.type === "dropdown" && (
-                <Dropdown data={item} />
+                <Dropdown
+                  data={item}
+                  className="h-full w-24 flex items-center justify-center"
+                />
               )}
               {item.type === "link" && (
                 <span
-                  key={index}
                   onClick={() => navigate(item.path)}
-                  className="cursor-pointer hover:opacity-70 active:opacity-60 transition-all ml-10 hidden sm:block select-none"
+                  className={clsx(
+                    location.pathname === item.path && "text-blue-400",
+                    "w-24 h-full sm:flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-60 transition-all hidden select-none"
+                  )}
                 >
                   {item.title}
                 </span>
               )}
-            </>
+            </div>
           ))}
         </div>
 

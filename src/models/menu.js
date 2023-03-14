@@ -2,7 +2,7 @@ export const menuList = [
   {
     title: "首页",
     type: "link",
-    path: "/"
+    path: ""
   },
   {
     title: "品牌",
