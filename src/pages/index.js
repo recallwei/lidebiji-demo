@@ -1,6 +1,7 @@
 import React from "react"
 import { Layout, Banner, ServiceCard, ImageLoop, TargetCard } from "components"
 import { homePageData } from "models"
+import { openWindow } from "utils"
 
 const HomePage = ({ location }) => {
   const {
@@ -82,7 +83,10 @@ const HomePage = ({ location }) => {
       >
         <div className="text-2xl mb-4">预约咨询</div>
         <div className="text-lg mb-4">想要获得专属演示，请与我们取得联系。</div>
-        <button className="text-sm bg-white text-[#2878FC] rounded-3xl font-semibold py-2 px-8 cursor-pointer active:opacity-70">
+        <button
+          onClick={() => openWindow("mailto: bd@leadingcloud.xyz")}
+          className="text-sm bg-white text-[#2878FC] rounded-3xl font-semibold py-2 px-8 cursor-pointer active:opacity-70"
+        >
           联系我们
         </button>
       </section>
