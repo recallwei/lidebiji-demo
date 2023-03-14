@@ -18,8 +18,8 @@ const HomePage = () => {
       <Banner
         title={bannerData.title}
         description={bannerData.description}
-        image="/pages/index/bannerPic.png"
-        background="/pages/index/background.png"
+        image="/pages/operate/bannerPic.png"
+        background="/pages/operate/background.png"
       />
 
       <section className="w-full px-4 xl:px-64 py-16 bg-gray-100">
@@ -79,7 +79,7 @@ const HomePage = () => {
 
       <section
         className="w-full h-[188px] px-4 xl:px-64 py-16 text-white flex flex-col justify-center items-center"
-        style={{ backgroundImage: `url(/pages/index/consult/background.png)` }}
+        style={{ backgroundImage: `url(/pages/operate/consult/background.png)` }}
       >
         <div className="text-2xl mb-4">预约咨询</div>
         <div className="text-lg mb-4">想要获得专属演示，请与我们取得联系。</div>
