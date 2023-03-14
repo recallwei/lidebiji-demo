@@ -2,7 +2,7 @@ import React from "react"
 
 const ServiceCard = ({ data }) => {
   return (
-    <div className="rounded-sm flex flex-col shadow-xl p-10 hover:shadow-2xl cursor-pointer">
+    <div className="rounded-sm flex flex-col shadow-xl p-10 hover:shadow-2xl">
       <img
         className="mb-4 rounded-full w-20 h-20 self-center"
         src={data.path}
