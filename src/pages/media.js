@@ -23,14 +23,14 @@ const MediaPage = ({ location }) => {
         background="/pages/media/background.png"
       />
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16 bg-gray-100">
+      <section className="w-full px-4 xl:px-64 py-16 bg-gray-100">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
         <div className="flex flex-wrap justify-center gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
-              className="flex-[0_0_28%]"
+              className="sm:flex-[0_0_28%] "
               key={index}
               data={item}
             />
@@ -38,7 +38,7 @@ const MediaPage = ({ location }) => {
         </div>
       </section>
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16">
+      <section className="w-full sm:px-4 xl:px-64 py-16">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           媒体资源
         </div>
@@ -56,15 +56,15 @@ const MediaPage = ({ location }) => {
         </div>
       </section>
 
-      <section className="relative w-full max-sm:px-4 sm:px-4 xl:px-64 pt-16 max-sm:pb-80 sm:pb-60 xl:pb-60 bg-[#333333] text-white">
+      <section className="relative w-full px-4 xl:px-64 pt-16 max-sm:pb-80 sm:pb-60 xl:pb-60 bg-[#333333] text-white">
         <div className="text-2xl flex items-center justify-center mb-8 ">投放流程</div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-11">
+        <div className="grid grid-cols-1 sm:grid-cols-11">
           {processData.map((item, index) => (
             <div key={index}>
               {item.arrow ? (
                 <div className="h-24 flex items-center justify-center">
                   <img
-                    className="max-sm:rotate-90"
+                    className="rotate-90"
                     width={18}
                     src="icons/arrow-right.svg"
                     alt=""
@@ -86,11 +86,11 @@ const MediaPage = ({ location }) => {
           ))}
         </div>
         <div
-          className="absolute max-sm:mx-4 sm:mx-24 xl:mx-64 max-sm:py-4 sm:py-14 max-sm:px-2 sm:px-4 xl:px-36 rounded-xl z-10 max-sm:-bottom-[200px] sm:-bottom-[180px] xl:-bottom-[150px] right-0 left-0 m-auto shadow-2xl bg-center bg-cover text-[#3A3A3A]"
+          className="absolute mx-4 sm:mx-24 xl:mx-64 py-4 sm:py-14 px-2 sm:px-4 xl:px-36 rounded-xl z-10 -bottom-[200px] sm:-bottom-[180px] xl:-bottom-[150px] right-0 left-0 m-auto shadow-2xl bg-center bg-cover text-[#3A3A3A]"
           style={{ backgroundImage: `url(/pages/media/process/background.png)` }}
         >
           <div className="text-2xl flex items-center justify-center mb-8">品牌客户</div>
-          <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 max-sm:gap-8 sm:gap-16 xl:gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-16 xl:gap-16">
             {brandCustomerData.map((item, index) => (
               <div
                 key={index}
@@ -105,11 +105,11 @@ const MediaPage = ({ location }) => {
         </div>
       </section>
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 pt-60 pb-16 bg-gray-100">
+      <section className="w-full px-4 xl:px-64 pt-60 pb-16 bg-gray-100">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           软文营销优势
         </div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 justify-center gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 justify-center gap-16">
           {salesData.map((item, index) => (
             <SalesCard
               key={index}

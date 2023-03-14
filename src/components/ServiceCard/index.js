@@ -3,7 +3,7 @@ import clsx from "clsx"
 
 const ServiceCard = ({ data, className }) => {
   return (
-    <div className={clsx("rounded-sm flex flex-col shadow-xl p-10 hover:shadow-2xl", className)}>
+    <div className={clsx("rounded-sm flex flex-col shadow-xl p-10 hover:shadow-2xl text-center", className)}>
       <img
         className="mb-4 rounded-full w-20 h-20 self-center"
         src={data.path}

@@ -8,7 +8,7 @@ const Header = ({ location }) => {
   const [isShowMenu, toggleShowMenu] = useToggle(false)
   return (
     <>
-      <div className="bg-[#424242] w-full h-16 max-sm:px-4 sm:px-4 xl:px-64  flex items-center justify-between text-white whitespace-nowrap">
+      <div className="bg-[#424242] w-full h-16 px-4 xl:px-64  flex items-center justify-between text-white whitespace-nowrap">
         <div className="flex items-center">
           <img
             className="mr-10"
@@ -23,7 +23,7 @@ const Header = ({ location }) => {
               onClick={() => navigate(item.path)}
               className={clsx(
                 location.pathname === item.path && "text-blue-400",
-                "cursor-pointer hover:underline underline-offset-8 hover:text-blue-400 transition-all mr-10 max-sm:hidden"
+                "cursor-pointer hover:underline underline-offset-8 hover:text-blue-400 transition-all mr-10 hidden sm:visible"
               )}
             >
               {item.title}
@@ -32,7 +32,7 @@ const Header = ({ location }) => {
         </div>
 
         {/* 操作区域 */}
-        <div className="flex items-center max-sm:hidden select-none">
+        <div className="sm:flex items-center hidden sm:visible select-none">
           <div className="mr-8 cursor-pointer active:opacity-70 transition-all">登录</div>
           <button className="bg-blue-400 px-4 py-2 rounded-md cursor-pointer active:opacity-70 transition-all">
             免费试用

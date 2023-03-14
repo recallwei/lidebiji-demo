@@ -22,11 +22,11 @@ const HomePage = ({ location }) => {
         background="/pages/index/background.png"
       />
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16 bg-gray-100">
+      <section className="w-full px-4 xl:px-64 py-16 bg-gray-100">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           平台服务
         </div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
               key={index}
@@ -36,7 +36,7 @@ const HomePage = ({ location }) => {
         </div>
       </section>
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16">
+      <section className="w-full px-4 sm:px-4 xl:px-64 py-16">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           合作伙伴
         </div>
@@ -54,11 +54,11 @@ const HomePage = ({ location }) => {
         </div>
       </section>
 
-      <section className="w-full max-sm:px-4 sm:px-4 xl:px-64 py-16 bg-gray-100">
+      <section className="w-full px-4 xl:px-64 py-16 bg-gray-100">
         <div className="text-2xl flex items-center justify-center mb-8 text-[#3A3A3A]">
           部分案例
         </div>
-        <div className="grid max-sm:grid-cols-1 sm:grid-cols-3 justify-items-center gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center gap-16">
           {targetData.map((item, index) => (
             <TargetCard
               key={index}
@@ -78,7 +78,7 @@ const HomePage = ({ location }) => {
       </section>
 
       <section
-        className="w-full h-[188px] max-sm:px-4 sm:px-4 xl:px-64 py-16 text-white flex flex-col justify-center items-center"
+        className="w-full h-[188px] px-4 xl:px-64 py-16 text-white flex flex-col justify-center items-center"
         style={{ backgroundImage: `url(/pages/index/consult/background.png)` }}
       >
         <div className="text-2xl mb-4">预约咨询</div>
