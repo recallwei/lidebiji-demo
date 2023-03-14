@@ -3,7 +3,7 @@ import { Layout, Banner, ServiceCard, ImageLoop, TargetCard } from "components"
 import { homePageData } from "models"
 import { openWindow } from "utils"
 
-const HomePage = ({ location }) => {
+const OperatePage = ({ location }) => {
   const {
     bannerData,
     serviceData,
@@ -94,6 +94,6 @@ const HomePage = ({ location }) => {
   )
 }
 
-export default HomePage
+export default OperatePage
 
 export const Head = () => <title>自主运营 | 里德笔记</title>
