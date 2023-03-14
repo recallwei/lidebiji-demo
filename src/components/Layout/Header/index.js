@@ -1,7 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby"
 import clsx from "clsx"
-import { Dropdown } from "components"
+import { Dropdown, DropdownMobile } from "components"
 import { useToggle } from "hooks"
 import { menuList } from "models"
 
@@ -65,20 +65,29 @@ const Header = () => {
       </div>
       <div
         className={clsx(
-          "bg-[#424242] w-full transition-[height] duration-300 ease-out overflow-hidden flex flex-col px-4 text-white",
-          isShowMenu ? "h-[300px]" : "h-0"
+          "bg-[#424242] w-full transition-all overflow-hidden flex flex-col text-white",
+          isShowMenu ? "max-h-[1000px] p-4" : "max-h-0 px-4"
         )}
       >
         {menuList.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => navigate(item.path)}
-            className={clsx(
-              location.pathname === item.path && "text-blue-400",
-              "cursor-pointer hover:underline underline-offset-8 hover:text-blue-400 transition-all mb-2"
+          <div key={index}>
+            {item.type === "dropdown" && (
+              <DropdownMobile
+                data={item}
+                className="mb-2"
+              />
             )}
-          >
-            {item.title}
+            {item.type === "link" && (
+              <div
+                onClick={() => navigate(item.path)}
+                className={clsx(
+                  location.pathname === item.path && "text-blue-400",
+                  "cursor-pointer hover:text-blue-400 transition-all mb-2"
+                )}
+              >
+                {item.title}
+              </div>
+            )}
           </div>
         ))}
         <div className="border-t-[0.5px] border-white w-full h-1 mt-0.5" />

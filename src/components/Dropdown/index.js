@@ -17,7 +17,7 @@ const Dropdown = ({ data, className }) => {
 
       <div
         className={clsx(
-          "hidden z-10 absolute left-0 right-0 m-auto bg-[#434343] shadow-lg px-2 rounded-md flex-col items-center select-none",
+          "hidden z-10 absolute left-0 right-0 m-auto bg-[#434343] shadow-lg px-2 py-1 rounded-md flex-col items-center select-none",
           styles.dropdownContent
         )}
         style={{ bottom: -(data.children.length * 40) }}
@@ -26,7 +26,7 @@ const Dropdown = ({ data, className }) => {
           <span
             className={clsx(
               location.pathname === child.path && "text-blue-400",
-              "cursor-pointer my-1 w-full h-8 text-center flex justify-center items-center rounded-sm hover:bg-slate-400 text-sm active:opacity-70 transition-all"
+              "cursor-pointer my-1 w-full h-8 text-center flex justify-center items-center rounded-sm hover:bg-slate-600 text-sm active:opacity-70 transition-all"
             )}
             key={childIndex}
             onClick={() => navigate(child.path)}
