@@ -12,7 +12,8 @@ const Header = () => {
       <div className="bg-[#424242] w-full h-16 px-4 xl:px-64  flex items-center justify-between text-white whitespace-nowrap">
         <div className="flex items-center h-16">
           <img
-            className="mr-10"
+            onClick={() => navigate("/")}
+            className="mr-10 cursor-pointer"
             src="/logo.png"
             alt="里德笔记"
             width="128"
