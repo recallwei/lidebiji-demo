@@ -3,7 +3,7 @@ import { Layout, Banner, ServiceCard, ImageLoop, TargetCard } from "components"
 import { homePageData } from "models"
 import { openWindow } from "utils"
 
-const HomePage = () => {
+const HomePage = ({ location }) => {
   const {
     bannerData,
     serviceData,
@@ -14,7 +14,7 @@ const HomePage = () => {
   } = homePageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Banner
         title={bannerData.title}
         description={bannerData.description}

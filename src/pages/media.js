@@ -2,7 +2,7 @@ import React from "react"
 import { Layout, Banner, ServiceCard, ImageLoop, SalesCard } from "components"
 import { mediaPageData } from "models"
 
-const MediaPage = () => {
+const MediaPage = ({ location }) => {
   const {
     bannerData,
     serviceData,
@@ -15,7 +15,7 @@ const MediaPage = () => {
   } = mediaPageData
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Banner
         title={bannerData.title}
         description={bannerData.description}

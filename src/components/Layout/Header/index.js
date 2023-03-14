@@ -5,7 +5,7 @@ import { Dropdown, DropdownMobile } from "components"
 import { useToggle } from "hooks"
 import { menuList } from "models"
 
-const Header = () => {
+const Header = ({ location }) => {
   const [isShowMenu, toggleShowMenu] = useToggle(false)
   return (
     <>
