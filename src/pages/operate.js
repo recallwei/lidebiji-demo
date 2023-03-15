@@ -83,12 +83,12 @@ const OperatePage = ({ location }) => {
       >
         <div className="text-2xl mb-4">预约咨询</div>
         <div className="text-lg mb-4">想要获得专属演示，请与我们取得联系。</div>
-        <button
+        <div
           onClick={() => openWindow("mailto: bd@leadingcloud.xyz")}
           className="text-sm bg-white text-[#2878FC] rounded-3xl font-semibold py-2 px-8 cursor-pointer active:opacity-70"
         >
           联系我们
-        </button>
+        </div>
       </section>
     </Layout>
   )
