@@ -27,7 +27,7 @@ const Header = ({ location }) => {
               {item.type === "dropdown" && (
                 <Dropdown
                   data={item}
-                  className="h-full w-24 md:flex items-center justify-center hidden"
+                  className="h-full w-16 lg:w-24 md:flex items-center justify-center hidden"
                   location={location}
                 />
               )}
@@ -36,7 +36,7 @@ const Header = ({ location }) => {
                   onClick={() => navigate(item.path)}
                   className={clsx(
                     location.pathname === item.path && "text-blue-400",
-                    "w-24 h-full md:flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-60 transition-all hidden select-none"
+                    "w-16 lg:w-24 h-full md:flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-60 transition-all hidden select-none"
                   )}
                 >
                   {item.title}

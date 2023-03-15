@@ -6,7 +6,7 @@ const Banner = ({ title, description, image, background }) => {
       className="w-full px-4 py-4 xl:px-64 h-[400px] xl:h-[550px] ultra:h-[800px] text-white bg-cover bg-center flex flex-col sm:flex-row justify-center"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <div className="flex flex-col justify-center text-center">
+      <div className="flex flex-col justify-center text-center md:text-left">
         <span className="text-3xl mb-3 sm:mb-6 whitespace-nowrap">{title}</span>
         <span className="md:max-w-[320px] whitespace-normal break-words text-sm">{description}</span>
       </div>
