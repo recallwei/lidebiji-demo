@@ -108,7 +108,7 @@ const brandCustomerData = [
   {
     title: "品牌客户",
     description: "多年沉淀深得行业广泛认可与好评",
-    numText: "10w+"
+    numText: "5000+"
   },
   {
     title: "日均发稿",
