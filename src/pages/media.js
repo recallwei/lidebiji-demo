@@ -30,7 +30,7 @@ const MediaPage = ({ location }) => {
         <div className="flex flex-wrap justify-center gap-16">
           {serviceData.map((item, index) => (
             <ServiceCard
-              className="sm:flex-[0_0_28%] "
+              className="sm:flex-[0_0_28%] grow"
               key={index}
               data={item}
             />
@@ -58,13 +58,13 @@ const MediaPage = ({ location }) => {
 
       <section className="relative w-full px-4 xl:px-64 pt-16 max-sm:pb-80 sm:pb-60 xl:pb-60 bg-[#333333] text-white">
         <div className="text-2xl flex items-center justify-center mb-8 ">投放流程</div>
-        <div className="grid grid-cols-1 sm:grid-cols-11">
+        <div className="grid grid-cols-1 md:grid-cols-11">
           {processData.map((item, index) => (
             <div key={index}>
               {item.arrow ? (
                 <div className="h-24 flex items-center justify-center">
                   <img
-                    className="rotate-90"
+                    className="rotate-90 md:rotate-0"
                     width={18}
                     src="icons/arrow-right.svg"
                     alt=""

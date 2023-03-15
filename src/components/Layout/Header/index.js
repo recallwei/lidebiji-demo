@@ -9,7 +9,7 @@ const Header = ({ location }) => {
   const [isShowMenu, toggleShowMenu] = useToggle(false)
   return (
     <>
-      <div className="bg-[#424242] w-full h-16 px-4 xl:px-64  flex items-center justify-between text-white whitespace-nowrap">
+      <div className="bg-[#424242] w-full h-16 px-4 xl:px-64 flex items-center justify-between text-white whitespace-nowrap">
         <div className="flex items-center h-16">
           <img
             onClick={() => navigate("/")}
@@ -27,7 +27,7 @@ const Header = ({ location }) => {
               {item.type === "dropdown" && (
                 <Dropdown
                   data={item}
-                  className="h-full w-24 flex items-center justify-center"
+                  className="h-full w-24 md:flex items-center justify-center hidden"
                   location={location}
                 />
               )}
@@ -36,7 +36,7 @@ const Header = ({ location }) => {
                   onClick={() => navigate(item.path)}
                   className={clsx(
                     location.pathname === item.path && "text-blue-400",
-                    "w-24 h-full sm:flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-60 transition-all hidden select-none"
+                    "w-24 h-full md:flex items-center justify-center cursor-pointer hover:opacity-70 active:opacity-60 transition-all hidden select-none"
                   )}
                 >
                   {item.title}
@@ -47,7 +47,7 @@ const Header = ({ location }) => {
         </div>
 
         {/* 操作区域 */}
-        <div className="sm:flex items-center hidden select-none">
+        <div className="md:flex items-center hidden select-none">
           <div className="mr-8 cursor-pointer active:opacity-70 transition-all">登录</div>
           <button className="bg-blue-400 px-4 py-2 rounded-md cursor-pointer active:opacity-70 transition-all">
             免费试用
@@ -55,7 +55,7 @@ const Header = ({ location }) => {
         </div>
 
         {/* 手机端菜单 */}
-        <div className="flex items-center sm:hidden">
+        <div className="flex items-center md:hidden">
           <img
             onClick={() => toggleShowMenu()}
             className="cursor-pointer active:opacity-70 transition-all"
