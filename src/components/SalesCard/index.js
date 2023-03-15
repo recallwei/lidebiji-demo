@@ -2,7 +2,7 @@ import React from "react"
 
 const TargetCard = ({ data }) => {
   return (
-    <div className="rounded-sm flex flex-col shadow-xl hover:shadow-2xl">
+    <div className="bg-white rounded-sm flex flex-col shadow-xl hover:shadow-2xl">
       <img
         className="w-full"
         src={data.imgPath}
