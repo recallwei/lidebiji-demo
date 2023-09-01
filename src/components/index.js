@@ -1,8 +1,8 @@
-export { default as Layout } from "./Layout"
-export { default as Banner } from "./Banner"
-export { default as ServiceCard } from "./ServiceCard"
-export { default as ImageLoop } from "./ImageLoop"
-export { default as TargetCard } from "./TargetCard"
-export { default as SalesCard } from "./SalesCard"
-export { default as Dropdown } from "./Dropdown"
-export { default as DropdownMobile } from "./DropdownMobile"
+export { default as Layout } from './Layout'
+export { default as Banner } from './Banner'
+export { default as ServiceCard } from './ServiceCard'
+export { default as ImageLoop } from './ImageLoop'
+export { default as TargetCard } from './TargetCard'
+export { default as SalesCard } from './SalesCard'
+export { default as Dropdown } from './Dropdown'
+export { default as DropdownMobile } from './DropdownMobile'

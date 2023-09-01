@@ -1,7 +1,0 @@
-lidebiji
-clsx
-tailwindcss
-nprogress
-zaker
-qborn
-chictoo

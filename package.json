@@ -1,34 +1,51 @@
 {
-  "name": "lidebiji",
-  "private": true,
-  "author": "Bruce Song <recall4056@gmail.com>",
+  "name": "lidebiji-demo",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cspell:check": "cspell \"**\"",
+    "eslint:check": "eslint \"**/*.{ts,tsx,js,jsx}\" --color",
+    "eslint:fix": "pnpm eslint:check --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
-    "gatsby": "^5.7.0",
-    "gatsby-plugin-image": "^3.7.0",
-    "gatsby-plugin-nprogress": "^5.7.0",
-    "gatsby-plugin-sharp": "^5.7.0",
-    "gatsby-source-filesystem": "^5.7.0",
-    "gatsby-transformer-sharp": "^5.7.0",
+    "clsx": "^2.0.0",
+    "gatsby": "^5.12.3",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-nprogress": "^5.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.36.0",
-    "eslint-plugin-react": "^7.32.2",
-    "gatsby-plugin-manifest": "^5.7.0",
-    "gatsby-plugin-postcss": "^6.7.0",
+    "@brucesong/eslint-config-react": "^1.0.8",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "autoprefixer": "^10.4.15",
+    "cspell": "^7.3.2",
+    "eslint": "^8.48.0",
+    "gatsby-plugin-manifest": "^5.12.0",
+    "gatsby-plugin-postcss": "^6.12.0",
     "gatsby-plugin-root-import": "^2.0.9",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "tailwindcss": "^3.2.7"
-  }
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3"
+  },
+  "packageManager": "pnpm@8.5.0",
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=8.0.0"
+  },
+  "private": true,
+  "license": "MIT"
 }

@@ -1,28 +1,31 @@
-/* eslint-env node */
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   siteMetadata: {
-    title: "里德笔记"
+    title: '里德笔记'
   },
-  trailingSlash: "never",
+  trailingSlash: 'never',
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-root-import",
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-root-import',
+
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "static/favicon.png"
+        icon: 'static/favicon.png'
       }
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: "#2878FC",
+        color: '#2878FC',
         showSpinner: false
       }
     }
